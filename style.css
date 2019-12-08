@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
+
+
+/*========================================
+HTML
+==========================================*/
+
+main {
+	max-width: 40rem;
+	margin: auto;
+}
+
+
+/*========================================
+Colors
+==========================================*/
+
+html {
+	--color-black: #000000;
+	--color-light-black: #666666;
+	
+	--color-red: #ff0000ff;
+
+	--color-orange: #ffb800ff;
+
+	--color-yellow: #ffff00f0;
+}
+
+
+/*========================================
+Font Sizing
+==========================================*/
+
+html {	
+	--size-ratio: 1.15;
+	--size-six-up: calc( var(--size-five-up) * var(--size-ratio) );
+	--size-five-up: calc( var(--size-four-up) * var(--size-ratio) );
+	--size-four-up: calc( var(--size-three-up) * var(--size-ratio) );
+	--size-three-up: calc( var(--size-two-up) * var(--size-ratio) );
+	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
+	--size-one-up: calc( 1rem * var(--size-ratio) );
+	--size-one-half-down: calc( 0.75rem * var(--size-ratio) );
+	--size-one-down: calc( 0.5rem * var(--size-ratio) );
+}
+
+
+/*========================================
+Typography
+==========================================*/
+
+html {
+	--font-body: 'Manjari', sans-serif;
+	font-family: var(--font-body);
+}
+
+a {
+	text-decoration: none;
+}
+
+a:active {
+	color: var(--color-red);
+	text-decoration: underline;
+}
+
+a:focus {
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--color-orange);
+}
+
+
+/*========================================
+Header Component
+==========================================*/
+
+.logo-header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 1rem 0 2rem 1.5rem;
+}
+
+.logo-name {
+	color: var(--color-black);
+	display: block;
+	font-family: var(--font-head);
+	text-align: center;
+}
+
+.logo-site {
+	background: -webkit-linear-gradient(#ffff00ff, #ffb800ff, #ff0000ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-color: grey;
+	color: var(--color-yellow);
+	display: block;	
+	margin-right: 2rem;
+	text-align: center;
+	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+}
+
+.page-nav a {
+	align-content: center;
+	display: inline-block;
+	font-size: var(--size-one-half-down);
+	text-decoration: none;
+}
+
+.page-nav a:active {
+	color: var(--color-light-blue);
+	background: var(--color-super-light-blue);
+	text-decoration: underline;
+}
+
+.page-nav a:focus {
+	text-decoration: underline;
+}
+
+.page-nav a:visited {
+	color: purple;
+}
+
+.page-nav li {
+	display: inline;
+	font-family: var(--font-head);
+	font-size: var(--size-one-up);
+	margin: .5rem 0 0 3.5rem;
+	list-style: none;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+@media ( min-width: 550px ) /*====for tablet====*/ {
+
+	.logo-header {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin: 2rem 0 0 2rem;
+	}
+
+	.logo-name {
+		color: var(--color-black);
+		display: block;
+		font-family: var(--font-head);
+		font-size: var(--size-six-up);
+		padding-left: 10rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.logo-site {
+		background: -webkit-linear-gradient(#ffff00ff, #ffb800ff, #ff0000ff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-color: grey;
+		color: var(--color-yellow);
+		display: block;
+		font-family: var(--font-head);
+		font-size: var(--size-four-up);
+		padding-left: 12rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.page-nav a {
+		font-size: var(--size-three-up);
+	}
+
+	.page-nav ul {
+		display: flex;
+		justify-content: center;
+	}
+
+	.page-nav li {
+		border-bottom: none;
+		display: block;
+		font-size: var(--size-two-up);
+		margin: .5rem;
+		padding: 1rem;
+		text-decoration: none;
+	}
+
+}
+
+@media ( min-width: 1100px ) /*====for desktop====*/ {
+
+	.logo-header {
+		align-items: center;
+		margin: 2.5rem 0 0 5rem;
+	}
+
+	.page-nav a {
+		align-content: center;
+		display: inline-block;
+		font-size: var(--size-three-up);
+		margin-top: 1rem;
+		text-decoration: none;
+	}
+
+	.page-nav a:hover {
+		transform: scale(1.05);
+	}
+
+}
+
+
+/*========================================
+Footer Components
+==========================================*/
+
+.footer-nav a {
+	display: inline-block;
+	font-size: var(--size-one-half-down);
+	text-decoration: none;
+}
+
+.footer-nav a:active {
+	color: var(--color-light-blue);
+	background: var(--color-super-light-blue);
+	text-decoration: underline;
+}
+
+.footer-nav a:focus {
+	text-decoration: underline;
+}
+
+.footer-nav a:visited {
+	color: purple;
+}
+
+.footer-nav li {
+	display: inline;
+	font-family: var(--font-head);
+	font-size: var(--size-one-up);
+	margin: .5rem 0 0 3.5rem;
+	list-style: none;
+	text-decoration: none;
+	text-transform: uppercase; 
+}
+
+footer p {
+	font-size: var(--size-one-half-down);
+	margin-top: 0;
+	text-align: center;
+}
+
+@media ( min-width: 550px ) /*====for tablet====*/ {
+
+	.footer-nav a {
+		font-size: 1rem;
+		padding-bottom: .25rem;
+	}
+
+	.footer-nav ul {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+
+	.footer-nav li {
+		border-bottom: none;
+		display: block;
+		font-size: 1.5rem;
+		margin: .5rem;
+		padding: 1rem;
+		text-decoration: none;
+	}
+
+	footer p {
+		font-size: var(--size-one-half-down);
+	}
+}
+
+@media ( min-width: 1100px ) /*====for desktop====*/ {
+
+	.footer-nav a {
+		font-size: 1.15rem;
+	}
+
+	footer p {
+		font-size: var(--size-one-up);
+	}	
+
+}
+
+/*=== /\ Josiah is okay with the above naming conventions /\ ===*/
+
+
+/*========================================
+Hero Components
+==========================================*/
+
+.hero-image {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+	background: url('images/HeroImage.png') no-repeat center;
+	background-size: cover;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.container h1 {
+	font-size: 72px;
+	letter-spacing: .2rem;
+	margin: 0;
+}
+
+.button-enter {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-yellow);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: var(--size-four-up);
+	padding: 10px 24px;
+	font-size: 30px;
+	text-decoration: none;
+	background: -webkit-linear-gradient(#ff0000ff, #ffb800ff, #ffff00ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	border-radius: 8px;
+	transition: .5s all;
+	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+}
+
+.bio h1 {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-black);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: var(--size-three-up);
+	padding: 10px 24px;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: .5s all;
+	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+		.bio h1 {
+			font-size: var(--size-six-up);
+			padding-bottom: 2rem;
+		}
+
+	}
+
+.bio p {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-black);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: var(--size-one-half-down);
+	padding: 10px 24px;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: .5s all;
+	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+			.bio p {
+				font-size: var(--size-one-up);
+			}
+
+		}
+
+
+/*========================================
+Headings Component
+==========================================*/
+
+h1 {
+	font-size: var(--size-two-up);
+	text-transform: uppercase;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+		h1 {
+			font-size: var(--size-six-up);
+		}
+
+	}
+
+h2 {
+	font-size: var(--size-one-up);
+	text-transform: uppercase;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+		h2 {
+			font-size: var(--size-four-up);
+		}
+
+	}
+
+h3 {
+	text-transform: uppercase;
+}
+
+
+/*========================================
+Page Title Components
+==========================================*/
+
+.page-title {
+	background: -webkit-linear-gradient(#ff0000ff, #ffb800ff, #ffff00ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+	color: var(--color-red);
+	font-size: var(--size-four-up);
+	font-style: italic;
+	padding: 3rem 0 1rem 0;
+	text-align: center;
+	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+}
+
+@media ( min-width: 550px ) /*====for tablet====*/ {
+
+	.page-title {
+		font-size: var(--size-six-up);
+		padding: none;
+	}
+
+}
+
+/*========================================
+Portfolio Page Components
+==========================================*/
+
+.portfolio-samples {
+	display: grid;
+	text-align: center;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+		.portfolio-samples {
+			display: grid;
+			grid-column-gap: 8rem;
+			grid-template-columns: 250px 250px;
+		}
+
+	}
+
+	@media ( min-width: 1100px ) /*====for desktop====*/ {
+
+		.portfolio-samples {
+			display: grid;
+			grid-column-gap: 8rem;
+			grid-template-columns: 200px 200px 200px;
+			justify-content: center;
+		}
+
+		.portfolio-samples div {
+			width: 250px;
+		}
+
+	}
+
+.portfolio-samples p {
+	font-size: var(--size-one-up);
+	margin-bottom: 5rem;
+}
+
+
+/*========================================
+Album Page Components
+==========================================*/
+
+.album-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.album-page p {
+	max-width: 350px;
+}
+
+.album-steps {
+	margin: auto;
+}
+
+.album-steps p {
+	margin: auto;
+}
+
+.album-graphics {
+	margin: 3rem 0 3rem 0;
+}
+
+@media ( min-width: 550px ) /*====for tablet====*/ {
+
+	.album-steps p {
+		margin: auto;
+		max-width: 450px;
+	}
+}
+
+
+/*========================================
+Resumé Page Components
+==========================================*/
+
+.circle {
+	border-radius: 50%;
+	color: black;
+	width: 50px;
+	height: 50px; 
+}
+
+#spin {
+	width: 50px;
+	height: 50px;
+	
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ffff00ff 0%, #ff0000ff 100%, #ffb800ff 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #ffff00ff, #ff0000ff);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #ffff00ff 0%, #ff0000ff 100%, #ffb800ff 95%);
+	
+	animation-name: spin; 
+	animation-duration: 3s; /* 3 seconds */
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+}
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.circle-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin: 3rem 0 5rem 0;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+			.circle-group {
+				justify-content: space-around;
+			}
+
+	}
+
+.circle-group h1 {
+	margin: 1.2rem 0 0 0;
+	letter-spacing: .35rem;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+				.circle-group h1 {
+					margin: .75rem 0 0 0;
+				}
+
+	}
+
+.resume-section {
+	margin-bottom: 7rem;
+	text-align: center;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+			.resume-section {
+				margin: 3rem 3rem 7rem 3rem;
+			}
+
+	}
+
+.resume-job {	
+	margin-left: 1.75rem;
+	text-align: left;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+		.resume-job {
+			display: grid;
+			grid-column-gap: 2rem;
+			grid-row-gap: 1rem;
+			grid-template-columns: 1fr 1fr 2fr;
+			margin: 0 0 2rem 0;
+		}
+
+	}
+
+	@media ( min-width: 1100px ) /*====for desktop====*/ {
+
+		.resume-job {
+			display: grid;
+			grid-column-gap: 2rem;
+			grid-template-columns: 250px 250px 250px;
+			justify-content: center;
+		}
+
+		.resume-job div {
+			width: 250px;
+		}
+
+	}
+
+.resume-job h2 {
+	font-size: var(--size-one-up);
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+			.resume-job h2 {
+				text-align: left;
+			}
+
+	}
+
+	@media ( min-width: 1100px ) /*====for desktop====*/ {
+
+			.resume-job h2 {
+				text-align: right;
+			}
+
+	}
+
+.resume-job h4 {
+	margin-top: 0;
+}
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+		.resume-job h4 {
+			text-align: center;
+		}
+
+	}
+
+.resume-job p {
+	margin: 1rem 0 2rem 0;
+}
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+				.resume-job p {
+					margin: 0;
+				}
+	}
+
+
+.resume-education {	
+	margin-left: 3rem;
+	text-align: left;
+}
+
+.resume-education h2 {
+	font-size: var(--size-one-up);
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.resume-education h4 {
+	margin-top: 0;
+}
+
+.resume-education p {
+	margin: 1rem 0 2rem 0;
+}
+
+.resume-skills {
+	display: flex;
+	justify-content: center;
+}
+
+.resume-skills-list {
+	padding: 0;
+	margin: 0;
+}
+
+.resume-skills-rainbow {
+	list-style-image: url(images/Rainbow.png);
+	list-style-position: inside;
+	margin-bottom: 2.5rem;
+	text-align: center;
+}
+
+.resume-skills-seesaw {
+	list-style-image: url(images/Seesaw.png);
+	list-style-position: inside;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.resume-skills-jigsaw {
+	list-style-image: url(images/Jigsaw.png);
+	list-style-position: inside;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.resume-skills-shoe {
+	list-style-image: url(images/Shoe.png);
+	list-style-position: inside;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.resume-skills-dollar {
+	list-style-image: url(images/Dollar.png);
+	list-style-position: inside;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/*===========FOR CLICKING ON (put back in HTML, delete when done)
+<div>
+	<a href="images/DallasFinal.png">
+	<img src="images/Dallas.png" alt="Dallas final"></a>
+	<h2>Dallas</h2>
+	<p>Warner Bros, 1950. Music by Max Steiner.</p>
+</div>
+=========*/
