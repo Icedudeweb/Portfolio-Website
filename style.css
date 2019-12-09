@@ -10,6 +10,11 @@ main {
 	margin: auto;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 
 /*========================================
 Colors
@@ -302,7 +307,7 @@ Hero Components
 	position: relative;
 	height: 500px;
 	overflow: hidden;
-	background: url('images/HeroImage.png') no-repeat center;
+	background: url('images/hero-image.png') no-repeat center;
 	background-size: cover;
 }
 
@@ -522,6 +527,10 @@ Album Page Components
 	}
 }
 
+.album-graphics-final {
+	margin-top: 3rem;
+}
+
 
 /*========================================
 Resumé Page Components
@@ -701,53 +710,64 @@ Resumé Page Components
 }
 
 .resume-skills-rainbow {
-	list-style-image: url(images/Rainbow.png);
+	list-style-image: url(images/rainbow.svg);
 	list-style-position: inside;
 	margin-bottom: 2.5rem;
 	text-align: center;
 }
 
 .resume-skills-seesaw {
-	list-style-image: url(images/Seesaw.png);
+	list-style-image: url(images/seesaw.svg);
 	list-style-position: inside;
 	margin-bottom: 2rem;
 	text-align: center;
 }
 
 .resume-skills-jigsaw {
-	list-style-image: url(images/Jigsaw.png);
+	list-style-image: url(images/jigsaw.svg);
 	list-style-position: inside;
 	margin-bottom: 1.5rem;
 	text-align: center;
 }
 
 .resume-skills-shoe {
-	list-style-image: url(images/Shoe.png);
+	list-style-image: url(images/shoe.svg);
 	list-style-position: inside;
 	margin-bottom: 2rem;
 	text-align: center;
 }
 
 .resume-skills-dollar {
-	list-style-image: url(images/Dollar.png);
+	list-style-image: url(images/dollar.svg);
 	list-style-position: inside;
 	margin-bottom: 2rem;
 	text-align: center;
 }
 
 
+/*========================================
+Contact Components
+==========================================*/
 
+form {
+	margin-left: 11rem;
+}
 
+@media ( min-width: 550px ) /*====for tablet====*/ {
 
+	form {
+	margin-left: 15rem;
+	}
+}
 
+input, label {
+	align-items: center;
+	display: block;	
+	margin-bottom: 1rem;
+	width: 10rem;
+}
 
-
-
-/*===========FOR CLICKING ON (put back in HTML, delete when done)
-<div>
-	<a href="images/DallasFinal.png">
-	<img src="images/Dallas.png" alt="Dallas final"></a>
-	<h2>Dallas</h2>
-	<p>Warner Bros, 1950. Music by Max Steiner.</p>
-</div>
-=========*/
+input {
+	-webkit-appearance: none; 
+  	appearance: none;
+}
