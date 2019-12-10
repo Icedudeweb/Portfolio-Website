@@ -463,20 +463,17 @@ Album Page Components
 Resumé Page Components
 ==========================================*/
 
-.section-heading {
-	position: relative;
-}
-
-.section-heading:before, .section-heading:after {
+.circle-gradient {
 	border-radius: 50%;
 	color: var(--color-black);
-	content:"";
-	display: block;
-	position: absolute;
 	width: 50px;
 	height: 50px; 
-	top:-1rem;
+}
 
+#spin {
+	width: 50px;
+	height: 50px;
+	
 	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ffff00ff 0%, #ff0000ff 100%, #ffb800ff 95%);
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, #ffff00ff, #ff0000ff);
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #ffff00ff 0%, #ff0000ff 100%, #ffb800ff 95%);
@@ -486,15 +483,6 @@ Resumé Page Components
 	animation-iteration-count: infinite; 
 	animation-timing-function: linear;
 }
-
-.section-heading:before {
-	left:-100px;
-}
-
-.section-heading:after {
-	right:-100px;
-}
-
 
 @keyframes spin {
 	from { transform: rotate(0deg); }
