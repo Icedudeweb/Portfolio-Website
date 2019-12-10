@@ -22,12 +22,8 @@ Colors
 
 html {
 	--color-black: #000000;
-	--color-light-black: #666666;
-	
 	--color-red: #ff0000ff;
-
 	--color-orange: #ffb800ff;
-
 	--color-yellow: #ffff00f0;
 }
 
@@ -76,7 +72,7 @@ a:hover {
 }
 
 a:visited {
-	color: var(--color-orange);
+	color: purple;
 }
 
 
@@ -102,7 +98,6 @@ Header Component
 	background: -webkit-linear-gradient(#ffff00ff, #ffb800ff, #ff0000ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	background-color: grey;
 	color: var(--color-yellow);
 	display: block;	
 	margin-right: 2rem;
@@ -117,103 +112,74 @@ Header Component
 	text-decoration: none;
 }
 
-.page-nav a:active {
-	color: var(--color-light-blue);
-	background: var(--color-super-light-blue);
-	text-decoration: underline;
-}
-
-.page-nav a:focus {
-	text-decoration: underline;
-}
-
-.page-nav a:visited {
-	color: purple;
-}
-
 .page-nav li {
 	display: inline;
 	font-family: var(--font-head);
 	font-size: var(--size-one-up);
-	margin: .5rem 0 0 3.5rem;
 	list-style: none;
+	margin: .5rem 0 0 3.5rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
-@media ( min-width: 550px ) /*====for tablet====*/ {
+	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-	.logo-header {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		margin: 2rem 0 0 2rem;
+		.logo-header {
+			justify-content: center;
+			margin: 2rem 0 0 2rem;
+		}
+
+		.logo-name {
+			font-size: var(--size-six-up);
+			padding-left: 10rem;
+			text-transform: uppercase;
+		}
+
+		.logo-site {
+			font-family: var(--font-head);
+			font-size: var(--size-four-up);
+			padding-left: 12rem;
+			text-transform: uppercase;
+		}
+
+		.page-nav a {
+			font-size: var(--size-three-up);
+		}
+
+		.page-nav ul {
+			display: flex;
+			justify-content: center;
+		}
+
+		.page-nav li {
+			border-bottom: none;
+			display: block;
+			font-size: var(--size-two-up);
+			margin: .5rem;
+			padding: 1rem;
+		}
+
 	}
 
-	.logo-name {
-		color: var(--color-black);
-		display: block;
-		font-family: var(--font-head);
-		font-size: var(--size-six-up);
-		padding-left: 10rem;
-		text-align: center;
-		text-transform: uppercase;
+	@media ( min-width: 1100px ) /*====for desktop====*/ {
+
+		.logo-header {
+			margin: 2.5rem 0 0 5rem;
+		}
+
+		.page-nav a {
+			align-content: center;
+			display: inline-block;
+			margin-top: 1rem;
+			text-decoration: none;
+		}
+
+		.page-nav a:hover {
+			transform: scale(1.05);
+			transition: .25s;
+		}
+
 	}
-
-	.logo-site {
-		background: -webkit-linear-gradient(#ffff00ff, #ffb800ff, #ff0000ff);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-color: grey;
-		color: var(--color-yellow);
-		display: block;
-		font-family: var(--font-head);
-		font-size: var(--size-four-up);
-		padding-left: 12rem;
-		text-align: center;
-		text-transform: uppercase;
-	}
-
-	.page-nav a {
-		font-size: var(--size-three-up);
-	}
-
-	.page-nav ul {
-		display: flex;
-		justify-content: center;
-	}
-
-	.page-nav li {
-		border-bottom: none;
-		display: block;
-		font-size: var(--size-two-up);
-		margin: .5rem;
-		padding: 1rem;
-		text-decoration: none;
-	}
-
-}
-
-@media ( min-width: 1100px ) /*====for desktop====*/ {
-
-	.logo-header {
-		align-items: center;
-		margin: 2.5rem 0 0 5rem;
-	}
-
-	.page-nav a {
-		align-content: center;
-		display: inline-block;
-		font-size: var(--size-three-up);
-		margin-top: 1rem;
-		text-decoration: none;
-	}
-
-	.page-nav a:hover {
-		transform: scale(1.05);
-	}
-
-}
 
 
 /*========================================
@@ -226,26 +192,12 @@ Footer Components
 	text-decoration: none;
 }
 
-.footer-nav a:active {
-	color: var(--color-light-blue);
-	background: var(--color-super-light-blue);
-	text-decoration: underline;
-}
-
-.footer-nav a:focus {
-	text-decoration: underline;
-}
-
-.footer-nav a:visited {
-	color: purple;
-}
-
 .footer-nav li {
 	display: inline;
 	font-family: var(--font-head);
 	font-size: var(--size-one-up);
-	margin: .5rem 0 0 3.5rem;
 	list-style: none;
+	margin: .5rem 0 0 3.5rem;
 	text-decoration: none;
 	text-transform: uppercase; 
 }
@@ -256,47 +208,29 @@ footer p {
 	text-align: center;
 }
 
-@media ( min-width: 550px ) /*====for tablet====*/ {
+	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-	.footer-nav a {
-		font-size: 1rem;
-		padding-bottom: .25rem;
+		.footer-nav a {
+			font-size: var(--size-one-half-up);
+			padding-bottom: .25rem;
+		}
+
+		.footer-nav ul {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+
+		.footer-nav li {
+			border-bottom: none;
+			display: block;
+			font-size: var(--size-one-up);
+			margin: .5rem;
+			padding: 1rem;
+		}
+
 	}
-
-	.footer-nav ul {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 0;
-		padding-left: 0;
-	}
-
-	.footer-nav li {
-		border-bottom: none;
-		display: block;
-		font-size: 1.5rem;
-		margin: .5rem;
-		padding: 1rem;
-		text-decoration: none;
-	}
-
-	footer p {
-		font-size: var(--size-one-half-down);
-	}
-}
-
-@media ( min-width: 1100px ) /*====for desktop====*/ {
-
-	.footer-nav a {
-		font-size: 1.15rem;
-	}
-
-	footer p {
-		font-size: var(--size-one-up);
-	}	
-
-}
-
-/*=== /\ Josiah is okay with the above naming conventions /\ ===*/
 
 
 /*========================================
@@ -304,59 +238,52 @@ Hero Components
 ==========================================*/
 
 .hero-image {
-	position: relative;
-	height: 500px;
-	overflow: hidden;
 	background: url('images/hero-image.png') no-repeat center;
 	background-size: cover;
+	min-height: 500px;
+	overflow: hidden;
+	position: relative;
 }
 
-.container {
+.container-hero {
+	left: 50%;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-}
-
-.container h1 {
-	font-size: 72px;
-	letter-spacing: .2rem;
-	margin: 0;
 }
 
 .button-enter {
-	position: absolute;
-	top: 90%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: var(--color-yellow);
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: var(--size-four-up);
-	padding: 10px 24px;
-	font-size: 30px;
-	text-decoration: none;
 	background: -webkit-linear-gradient(#ff0000ff, #ffb800ff, #ffff00ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	border-radius: 8px;
-	transition: .5s all;
+	color: var(--color-yellow);
+	font-size: var(--size-four-up);
+	font-weight: 700;
+	left: 50%;
+	padding: 10px 24px;
+	position: absolute;
+	text-decoration: none;
 	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+	text-transform: uppercase;
+	top: 90%;
+	transform: translate(-50%, -50%);
+	transition: .5s all;
 }
 
 .bio h1 {
-	position: absolute;
-	top: 75%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: var(--color-black);
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: var(--size-three-up);
-	padding: 10px 24px;
-	text-decoration: none;
 	border-radius: 8px;
-	transition: .5s all;
+	color: var(--color-black);
+	font-size: var(--size-three-up);
+	font-weight: 700;
+	left: 50%;
+	padding: 10px 24px;
+	position: absolute;
+	text-decoration: none;
 	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+	text-transform: uppercase;
+	top: 75%;	
+	transform: translate(-50%, -50%);	
+	transition: .5s all;	
 }
 
 	@media ( min-width: 550px ) /*====for tablet====*/ {
@@ -369,28 +296,28 @@ Hero Components
 	}
 
 .bio p {
-	position: absolute;
-	top: 80%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: var(--color-black);
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: var(--size-one-half-down);
-	padding: 10px 24px;
-	text-decoration: none;
 	border-radius: 8px;
-	transition: .5s all;
+	color: var(--color-black);
+	font-size: var(--size-one-half-down);
+	font-weight: 700;
+	left: 50%;
+	padding: 10px 24px;
+	position: absolute;
+	text-decoration: none;	
 	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
+	text-transform: uppercase;
+	top: 80%;	
+	transform: translate(-50%, -50%);
+	transition: .5s all;
 }
 
 	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-			.bio p {
-				font-size: var(--size-one-up);
-			}
-
+		.bio p {
+			font-size: var(--size-one-up);
 		}
+
+	}
 
 
 /*========================================
@@ -427,6 +354,10 @@ h3 {
 	text-transform: uppercase;
 }
 
+h4 {
+	text-transform: uppercase;
+}
+
 
 /*========================================
 Page Title Components
@@ -444,14 +375,14 @@ Page Title Components
 	text-shadow: 1px 1px .5px rgba(0,0,0,.15);
 }
 
-@media ( min-width: 550px ) /*====for tablet====*/ {
+	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-	.page-title {
-		font-size: var(--size-six-up);
-		padding: none;
+		.page-title {
+			font-size: var(--size-six-up);
+			padding: none;
+		}
+
 	}
-
-}
 
 /*========================================
 Portfolio Page Components
@@ -465,7 +396,6 @@ Portfolio Page Components
 	@media ( min-width: 550px ) /*====for tablet====*/ {
 
 		.portfolio-samples {
-			display: grid;
 			grid-column-gap: 8rem;
 			grid-template-columns: 250px 250px;
 		}
@@ -475,8 +405,6 @@ Portfolio Page Components
 	@media ( min-width: 1100px ) /*====for desktop====*/ {
 
 		.portfolio-samples {
-			display: grid;
-			grid-column-gap: 8rem;
 			grid-template-columns: 200px 200px 200px;
 			justify-content: center;
 		}
@@ -519,34 +447,36 @@ Album Page Components
 	margin: 3rem 0 3rem 0;
 }
 
-@media ( min-width: 550px ) /*====for tablet====*/ {
-
-	.album-steps p {
-		margin: auto;
-		max-width: 450px;
-	}
-}
-
 .album-graphics-final {
 	margin-top: 3rem;
 }
+
+	@media ( min-width: 550px ) /*====for tablet====*/ {
+
+		.album-steps p {
+			max-width: 450px;
+		}
+	}
 
 
 /*========================================
 Resumé Page Components
 ==========================================*/
 
-.circle {
-	border-radius: 50%;
-	color: black;
-	width: 50px;
-	height: 50px; 
+.section-heading {
+	position: relative;
 }
 
-#spin {
+.section-heading:before, .section-heading:after {
+	border-radius: 50%;
+	color: var(--color-black);
+	content:"";
+	display: block;
+	position: absolute;
 	width: 50px;
-	height: 50px;
-	
+	height: 50px; 
+	top:-1rem;
+
 	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #ffff00ff 0%, #ff0000ff 100%, #ffb800ff 95%);
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, #ffff00ff, #ff0000ff);
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #ffff00ff 0%, #ff0000ff 100%, #ffb800ff 95%);
@@ -556,6 +486,15 @@ Resumé Page Components
 	animation-iteration-count: infinite; 
 	animation-timing-function: linear;
 }
+
+.section-heading:before {
+	left:-100px;
+}
+
+.section-heading:after {
+	right:-100px;
+}
+
 
 @keyframes spin {
 	from { transform: rotate(0deg); }
@@ -571,22 +510,22 @@ Resumé Page Components
 
 	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-			.circle-group {
-				justify-content: space-around;
-			}
+		.circle-group {
+			justify-content: space-around;
+		}
 
 	}
 
 .circle-group h1 {
-	margin: 1.2rem 0 0 0;
 	letter-spacing: .35rem;
+	margin: 1.2rem 0 0 0;
 }
 
 	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-				.circle-group h1 {
-					margin: .75rem 0 0 0;
-				}
+		.circle-group h1 {
+			margin: .75rem 0 0 0;
+		}
 
 	}
 
@@ -597,9 +536,9 @@ Resumé Page Components
 
 	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-			.resume-section {
-				margin: 3rem 3rem 7rem 3rem;
-			}
+		.resume-section {
+			margin: 3rem 3rem 7rem 3rem;
+		}
 
 	}
 
@@ -623,8 +562,6 @@ Resumé Page Components
 	@media ( min-width: 1100px ) /*====for desktop====*/ {
 
 		.resume-job {
-			display: grid;
-			grid-column-gap: 2rem;
 			grid-template-columns: 250px 250px 250px;
 			justify-content: center;
 		}
@@ -643,17 +580,17 @@ Resumé Page Components
 
 	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-			.resume-job h2 {
-				text-align: left;
-			}
+		.resume-job h2 {
+			text-align: left;
+		}
 
 	}
 
 	@media ( min-width: 1100px ) /*====for desktop====*/ {
 
-			.resume-job h2 {
-				text-align: right;
-			}
+		.resume-job h2 {
+			text-align: right;
+		}
 
 	}
 
@@ -674,9 +611,10 @@ Resumé Page Components
 }
 	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-				.resume-job p {
-					margin: 0;
-				}
+		.resume-job p {
+			margin: 0;
+		}
+
 	}
 
 
@@ -705,8 +643,9 @@ Resumé Page Components
 }
 
 .resume-skills-list {
-	padding: 0;
+	list-style: none;
 	margin: 0;
+	padding: 0;
 }
 
 .resume-skills-rainbow {
@@ -753,12 +692,12 @@ form {
 	margin-left: 11rem;
 }
 
-@media ( min-width: 550px ) /*====for tablet====*/ {
+	@media ( min-width: 550px ) /*====for tablet====*/ {
 
-	form {
-	margin-left: 15rem;
+		form {
+		margin-left: 15rem;
+		}
 	}
-}
 
 input, label {
 	align-items: center;
